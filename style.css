@@ -16,7 +16,7 @@
 }
 
 .site-header a {
-   position: relative; /*　これが基準点を作る */
+  position: relative; /*　これが基準点を作る */
   color: white; 
   text-decoration: none; /* 下線を消す */
 }
@@ -24,6 +24,7 @@
 .site-header a::after {
   position: absolute;
   left: 0;
+  content: '';
   bottom: -2px; /* 文字のすぐ下に線を置く */
   width: 0%;
   height: 2px;
