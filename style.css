@@ -22,7 +22,6 @@
 }
 
 .site-header a::after {
-  content: "";
   position: absolute;
   left: 0;
   bottom: -2px; /* 文字のすぐ下に線を置く */
