@@ -1,0 +1,349 @@
+/* ヘッダー */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #8399c6df;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.site-header a {
+   position: relative; /*　これが基準点を作る */
+  color: white; 
+  text-decoration: none; /* 下線を消す */
+}
+
+.site-header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* 文字のすぐ下に線を置く */
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease; /* ← モーションの肝 */
+}
+
+.site-header a:hover::after {
+  width: 100%; /* ホバー時に線が伸びる */
+}
+  
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+main {
+  padding-top: 110px;
+}
+
+.site-header {
+  box-sizing: border-box;
+}
+
+/*スマホ用*/
+@media (max-width: 600px) {
+
+  /* ハンバーガー表示 */
+  .menu-btn {
+    display: block;
+  }
+
+  /* メニューは最初は非表示 */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #8399c6df;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* 開いたときだけ表示 */
+  .nav.open {
+    display: flex;
+  }
+
+  /* 縦並びにする */
+  .nav a {
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+}
+
+/*動画飛ぶリンクをボタンに*/
+.blue-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #133d6b;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.blue-btn:hover {
+  background: #082544;
+}
+
+/*フォント*/
+body {
+  font-family: "Noto Serif JP", serif;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+  margin: 0 auto;     /* 左右を自動で中央寄せ */
+  padding: 0 20px;    /* スマホ用の左右余白 */
+}
+p,Li {
+  font-size: 18px; /* 好きな大きさに変更 */
+}
+
+
+/*見出しのフォント*/
+h2, h3 {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 600;
+}
+h4{
+  font-size: 20px;
+}
+h3{
+  font-size: 22px;
+}
+/*目次の文字*/
+.mokuji a {
+  color: #333; 
+  
+}
+.mokuji a:hover {
+  opacity: 0.6; /* ← カーソルを合わせたら薄くなる */
+}
+
+/*楽曲紹介の文字*/
+summary h4 {
+  color: #333;
+}
+summary:hover h4{
+  opacity: 0.6;
+}
+summary {
+  list-style: none;  
+}
+
+/*取り消し線*/
+.del {
+  text-decoration: line-through;
+}
+
+/*スクロールの位置調整*/
+h2, h3 {
+  scroll-margin-top: 110px;
+}
+
+
+/*スクロールのモーション*/
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*説明文の行の背景色*/
+.explain {
+  background: #f7f7f7; /* 薄いグレー */
+  padding: 15px;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+/*見出しの装飾*/
+.h2-bg {
+  padding: 0.5em;/*文字周りの余白*/
+  background: #8399c6df;/*背景色*/
+  color: white;
+  border-left: solid 5px #082544;/*左線（実線 太さ 色）*/
+}
+
+/*こだわりリストのデザイン*/
+.kodawari-list {
+  list-style: none; /* 点を消す */
+  padding: 0;
+  margin: 0;
+}
+
+.kodawari-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.kodawari-list li:nth-child(even) {
+  background-color: #f7f7f7; /* 偶数行の背景色 */
+}
+
+/*写真大きさ*/
+img {
+  width: 300px;
+}
+
+/*ページをフェードイン*/
+.wrapper {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeup 0.8s ease forwards;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*summaryを上からフェードインさせる*/
+details .content {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);   /* 上から降りてくる */
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    max-height 0.35s ease;
+}
+
+details[open] .content {
+  max-height: 600px;  /* 中身より少し大きければOK */
+  opacity: 1;
+  transform: translateY(0);  /* 元の位置に戻る */
+}
+
+/*作品紹介横に分割*/
+/*ドット絵*/
+.two-box1 {
+  display: flex;
+  gap: 40px;            /* 左右の余白 */
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.left1 {
+  width: 400px;
+}
+
+.right1 {    
+  flex: 1;   
+  min-width: 0;   
+}
+.code-bun{
+  text-align: center;
+  margin-top: 70px;
+}
+/*ゲームの*/
+.two-box2 {
+  display: flex;
+  gap: 40px;            /* 左右の余白 */
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.left2 {
+  width: 400px;
+}
+.left2-img-row {
+  display: flex;         /* ← 横並びにする */
+  gap: 10px;             /* ← 画像同士の余白 */
+  width: 200px;
+}
+
+.left2-img-row img {
+  width: 100%;
+  height: auto;
+  display: block;        /* ← 中央寄りになるバグ防止 */
+  border-radius: 8px;
+}
+
+.right2 {    
+  flex: 1;   
+  min-width: 0;
+  margin-top: 60px;
+
+}
+/*ゲームの設定のリストの上の文章*/
+.right2-bun{
+  text-align: center;
+}
+
+/*ゲームのコードの配置*/
+.code-center {
+  display: flex;
+  justify-content: center;   /* ← 中央寄せの本体 */
+  margin: 30px 0;            /* 上下の余白 */
+}
+
+/*コードの表示*/
+pre code {
+  background: #f5f5f5;
+  max-height: 600px; /*これによってスクロールになる*/
+  width: 650px;
+  height: 500px;
+  overflow-y: auto; /*縦スクロール*/
+  overflow-x: auto;
+  padding: 16px;
+  display: block;
+  border-radius: 6px;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre;   /* 改行・スペースをそのまま表示 */
+}
+/*画像の表示*/
+.photo{
+  transition: transform 0.25s ease;
+}
+
+.photo:hover {
+  transform: scale(1.1);
+}
+
+
+/* 本文を包む箱 */
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 20px 20px; /*上、左右、下の余白*/
+  min-height: calc(100vh -100px - 100px); /* ← フッターの高さ分を引く */
+}
+
+
+
+/*フッター*/
+.footer-band {
+
+  background: #133d6b;   /* 帯の背景色 */
+  color: white;           /* 文字色 */
+  text-align: center;    /* 中央寄せ */
+  padding: 20px 0;       /* 上下の余白 */
+  font-size: 0.9em;      /* 少し小さめの文字 */
+  margin-top: 40px; 
+  width: calc(100vw - 10px);
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;  
+}

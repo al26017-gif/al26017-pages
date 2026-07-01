@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>作品</title>
+        </title>
+         <link rel="stylesheet" href="style.css">
+         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+
+
+    </head>
+    <body>
+        
+<header class="site-header">
+  <h1 class="logo">AL26017</h1>
+  <nav class="nav">
+    <a href="index.html">トップページ</a>
+    <a href="like.html">好きなもの</a>
+    <a href="works.html">作品</a>
+   
+  </nav>
+</header>
+
+<main class="wrapper">
+
+<h3 id="mokuji" >＜目次＞</h3>
+<ul class="mokuji">
+<li><a href="#dott">1.ドット絵</a></li>
+<li><a href="#game">2.ゲーム</a></li>
+<li><a href="#pbl">3.PBL作品</a></li>
+</ul>
+
+<div class="two-box1">
+    <div class="left1">
+<h3 id="dott"><span class="h2-bg">ドット絵</span></h3>
+<p>terminalmode.hを使用して制作したドット絵</p>
+<p>宇宙が好きなので原色で表しやすい地球を描いてみた。</p>
+<img src="IMG_5172.jpeg" alt="地球">
+</div>
+<div class="right1">
+    <h3 class="code-bun">＜コード＞</h3>
+<pre><code>
+    #include "terminalmode.h"
+
+int main(void) 
+{
+    led_canvas_clear();  // fill canvas with ' ',
+
+    int x,y;
+    y=13;
+    while(13 &lt =y && y &lt =16){
+      led_canvas_set_pixel(5,y,MIDORI);
+      y=y+1;
+    }
+    y=17;
+    while(17 &lt =y && y &lt =20){
+      led_canvas_set_pixel(5,y,AO);
+      y=y+1;
+    }
+    y=9;
+    while(9 &lt =y && y &lt =14){
+      led_canvas_set_pixel(6,y,MIDORI);
+      y=y+1;
+    }
+    y=15;
+    while(15 &lt =y && y &lt =24){
+      led_canvas_set_pixel(6,y,AO);
+      y=y+1;
+    }
+    y=7;
+    while(7 &lt =y && y &lt =14){
+      led_canvas_set_pixel(7,y,MIDORI);
+      led_canvas_set_pixel(10,y,AO);
+      y=y+1;
+    }
+    y=15;
+    while(15 &lt =y && y &lt =18){
+      led_canvas_set_pixel(7,y,AO);
+      led_canvas_set_pixel(10,y,MIDORI);
+      y=y+1;
+    }
+    led_canvas_set_pixel(7,19,MIDORI);
+    led_canvas_set_pixel(7,20,MIDORI);
+    y=21;
+    while(21 &lt =y && y &lt =26){
+      led_canvas_set_pixel(7,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(8,7,MIDORI);
+    led_canvas_set_pixel(8,8,MIDORI);
+    led_canvas_set_pixel(8,9,AO);
+    led_canvas_set_pixel(8,10,AO);
+    led_canvas_set_pixel(8,11,MIDORI);
+    led_canvas_set_pixel(8,12,MIDORI);
+    y=13;
+    while(13 &lt =y && y &lt =24){
+      led_canvas_set_pixel(8,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(8,25,MIDORI);
+    led_canvas_set_pixel(8,26,MIDORI);
+    y=5;
+    while(5 &lt =y && y &lt =8){
+      led_canvas_set_pixel(9,y,MIDORI);
+      y=y+1;
+    }
+    y=9;
+    while(9 &lt =y && y &lt =16){
+      led_canvas_set_pixel(9,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(9,17,MIDORI);
+    led_canvas_set_pixel(9,18,MIDORI);
+    y=19;
+    while(19 &lt =y && y &lt =24){
+      led_canvas_set_pixel(9,y,AO);
+      y=y+1;
+    }
+    y=25;
+    while(25 &lt =y && y &lt =28){
+      led_canvas_set_pixel(9,y,MIDORI);
+      y=y+1;
+    }
+    led_canvas_set_pixel(10,5,MIDORI);
+    led_canvas_set_pixel(10,6,MIDORI);
+    y=19;
+    while(19 &lt =y && y &lt =26){
+      led_canvas_set_pixel(10,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(10,27,MIDORI);
+    led_canvas_set_pixel(10,28,MIDORI);
+    y=5;
+    while(5 &lt =y && y &lt =12){
+      led_canvas_set_pixel(11,y,AO);
+      led_canvas_set_pixel(12,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(11,13,MIDORI);
+    led_canvas_set_pixel(11,14,MIDORI);
+    y=15;
+    while(15 &lt =y && y &lt =26){
+      led_canvas_set_pixel(11,y,AO);
+      led_canvas_set_pixel(12,y,AO);
+      y=y+1;
+    }
+    led_canvas_set_pixel(11,27,MIDORI);
+    led_canvas_set_pixel(11,28,MIDORI);
+    led_canvas_set_pixel(12,13,AO);
+    led_canvas_set_pixel(12,14,AO);
+    led_canvas_set_pixel(12,27,AO);
+    led_canvas_set_pixel(12,28,AO);
+    led_canvas_set_pixel(13,7,MIDORI);
+    led_canvas_set_pixel(13,8,MIDORI);
+    led_canvas_set_pixel(13,9,AO);
+    led_canvas_set_pixel(13,10,AO);
+    y=11;
+    while(11 &lt =y && y &lt =26){
+      led_canvas_set_pixel(13,y,AO);
+      led_canvas_set_pixel(14,y,AO);
+      y=y+1;
+    }
+    y=7;
+    while(7 &lt =y && y &lt =10){
+      led_canvas_set_pixel(14,y,MIDORI);
+      y=y+1;
+    }
+    y=9;
+    while(9 &lt =y && y &lt =12){
+      led_canvas_set_pixel(15,y,MIDORI);
+      y=y+1;
+    }
+    y=13;
+    while(13 &lt =y && y &lt =24){
+      led_canvas_set_pixel(15,y,AO);
+      y=y+1;
+    }
+    y=15;
+    while(15 &lt =y && y &lt =18){
+      led_canvas_set_pixel(16,y,MIDORI);
+      y=y+1;
+    }
+    led_canvas_set_pixel(16,13,AO);
+    led_canvas_set_pixel(16,14,AO);
+    led_canvas_set_pixel(16,19,AO);
+    led_canvas_set_pixel(16,20,AO);
+    led_canvas_set_pixel(2,4,KI);
+    led_canvas_set_pixel(3,3,KI);
+    led_canvas_set_pixel(3,4,KI);
+    led_canvas_set_pixel(3,5,KI);
+    led_canvas_set_pixel(4,4,KI);
+	  led_canvas_display();
+    printf(reset);
+
+    return 0; 
+}
+
+</code>
+</pre>
+</div>
+</div>
+
+<div class="two-box2">
+  <div class="left2">
+<h3 id="game"><span class="h2-bg">ゲーム</span></h3>
+<p>terminalmode2.hを使用して制作したゲーム</p>
+<p>授業で習ったコードを生かそうという固定観念に謎に縛られた結果、<br>
+  常にあるであろうゲームの下位互換という無個性の塊のようなゲームを作ってしまった。<br>
+  見ている人は同じ過ちをしないように。</p>
+  <div class="left2-img-row">
+<img src="IMG_5197.jpeg" class="photo" alt="落下ブロック１">
+<img src="IMG_5196.jpeg" class="photo" alt="落下ブロック2">
+</div>
+</div>
+<div class="right2">
+    <span class="right2-bun">
+    <h3>＜ゲーム設定＞</h3>
+    <p>板を動かして落下してくるブロックを受け止めて高いスコアを出そう</p>
+    </span>
+    <ul class="kodawari-list">
+    <Li>jキー：板が左に動く</Li>
+    <Li>kキー：板が右に動く</Li>
+    <Li>白いブロック：+1</Li>
+    <Li>青いブロック：+3</Li>
+    <Li>赤いブロック：ゲームオーバー</Li>
+    <Li>制限時間：30s</Li>
+    </ul>
+    </div>
+    </div>
+    <div class="code-center">
+  <pre><code>
+    
+    #include "terminalmode3.h"  // include tera.h and ansi_color.h
+
+    #define BLOCKS 15
+    
+    
+    int main(void)
+    {
+        led_canvas_setsize(0,0); //必須
+    unsigned int usec=70000; // micro second  /*画面更新時間*/ // our default sleep duration
+    unsigned int counter=0, speed=30; // screen updata and object moving spped
+    
+
+    int  n, i, k,j;
+    int  invaderROW[BLOCKS], invaderCOL[BLOCKS];
+    int invaderColor[BLOCKS], invaderSpeed[BLOCKS];
+    int score=0;
+    int bar_col = 4;     // 左端の位置
+    int bar_width = 4;    // 横幅
+    int bar_row = 11;     // どの高さに置くか（固定）
+    char ch;
+    int hitCount = 0;   // ブロックに当たった回数
+
+
+    time_t start = time(NULL);
+
+        led_canvas_clear();
+        set_terminal_reset(); // set terminal raw mode
+    
+        nonblock();/*上の二つとセットでEnterを押さずにリアルタイムで操作できる*/
+
+    //落ちてくるブロックの設定
+        for(i=0;i &lt BLOCKS;i++){
+            invaderROW[i]=0; 
+            invaderCOL[i]=rand()%LED_COL;
+
+        int r = rand() % 4;   // 0,1,2,3 の3通り
+        if(r == 0 || r == 1)
+            invaderColor[i] = SHIRO;   // 白が2回
+        else if(r == 2 ){
+            invaderColor[i] = AO;     // 赤が1回
+        }else invaderColor[i] = AKA;
+
+            
+        if(invaderColor[i]==AO){
+            invaderSpeed[i]=5+rand()%15;
+        }else invaderSpeed[i]=10+rand()%15;
+    }
+
+    //落ちてくるブロックの設定終
+
+        while (1) 
+        {
+            if(time(NULL) - start >= 30)
+                break;
+        usleep(usec);
+        led_canvas_clear(); /*毎フレーム画面を一度クリアしてから描画しなおす*/ 
+        
+        counter++;  
+        
+        ch=getkbchar(); //キー入力
+            if(ch == 'j' && bar_col > 0) bar_col--;
+            if(ch == 'k' && bar_col + bar_width < LED_COL) bar_col++;
+            if(ch == 'x') break;  
+    
+
+    /*動かす板の設定*/
+
+    for(i=0;i &lt bar_width;i++){
+        led_canvas_set_pixel(bar_row,bar_col+i,SHIRO);
+    }
+
+            for(i=0;i &lt BLOCKS;i++)      
+            {
+        
+            
+        if (counter % invaderSpeed[i] == 0) {
+            if (invaderROW[i] + 1 >= LED_ROW) {
+                invaderROW[i] = 0;
+                invaderCOL[i] = rand() % LED_COL;
+
+                int r = rand() % 4;
+                if (r == 0 || r == 1)
+                    invaderColor[i] = SHIRO;
+                else if (r == 2)
+                    invaderColor[i] = AO;
+                else
+                    invaderColor[i] = AKA;
+
+                if (invaderColor[i] == AO)
+                    invaderSpeed[i] = 5 + rand()%15;
+                else
+                    invaderSpeed[i] = 10 + rand()%15;
+            } else {
+                invaderROW[i]++;
+            }
+        }
+        led_canvas_set_pixel(invaderROW[i], invaderCOL[i], invaderColor[i]);
+
+            if( invaderROW[i] == bar_row 
+                && invaderCOL[i] >= bar_col 
+                && invaderCOL[i] &lt bar_col + bar_width ) /*当たり判定*/
+            {
+            if(invaderColor[i]==SHIRO){
+                for(k=0;k &lt bar_width;k++){
+                led_canvas_set_pixel(bar_row,bar_col+k,KI);
+                score++;
+            }
+        }
+            else if(invaderColor[i]==AO){
+                for(k=0;k &lt bar_width;k++){
+                led_canvas_set_pixel(bar_row,bar_col+k,AO);
+                score=score+3;
+            }
+        }
+            else {
+                for(k=0;k &lt bar_width;k++){
+                led_canvas_set_pixel(bar_row,bar_col+k,AKA);
+                
+                led_canvas_display();  // 最後の表示
+            printf("GAME OVER\n");
+            return 0;
+            }
+            hitCount++;   // 当たった回数を増やす
+        
+        
+    if (hitCount % 10 == 0) {   // 10回ごと
+        for (j=0; j &lt BLOCKS; j++) {
+            if (invaderColor[j] == AKA) {   // 赤だけ
+                invaderSpeed[j] -= 2;       // 速くする
+                if (invaderSpeed[j] &lt 2)    // 速くなりすぎ防止
+                    invaderSpeed[j] = 2;
+            }
+        }
+    }
+
+                    invaderROW[i] = 0;
+                    invaderCOL[i] = rand() % LED_COL;
+                    int r = rand() % 4; 
+                        if(r == 0 || r == 1)
+                    invaderColor[i] = SHIRO;   // 白が2回
+                    else if(r == 2 ){
+                    invaderColor[i] = AO;     // 赤が1回
+                }else invaderColor[i] = AKA;
+                 continue;       
+            }
+        }
+    
+                    
+                    led_canvas_set_pixel(invaderROW[i], invaderCOL[i], invaderColor[i]);
+                
+                }
+        }
+
+                
+        led_canvas_display();
+                        }
+        
+
+        led_canvas_clear();
+        led_canvas_display();
+        
+
+        printf("       END\n");
+        printf("SCORE: %d\n", score);    
+
+
+    
+        return 0; 
+    }
+
+</code></pre>
+</div>
+
+
+<h3 id="pbl"><span class="h2-bg">PBL作品</span></h3>
+
+
+  <h3>＜おまけ＞</h3>
+<h3><span class="h2-bg">弁当</span></h3>
+<p>高３のときに作っていた自作弁当たち</p>
+<img src="IMG_3827.jpeg" alt="弁当１">
+<img src="IMG_3828.jpeg" alt="弁当２">
+<br>※増岡は弁当を作品だと思っている
+</main>
+
+<footer class="footer-band">
+  芝浦工業大学<br>
+  Email adress: al26017@shibaura-it.ac.jp<br>
+  © 2026 Masuoka Website
+</footer>
+
+  </body>  
+</html>
