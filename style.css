@@ -212,7 +212,7 @@ details[open] .content {
 /*作品紹介横に分割*/
 /*ドット絵*/
 .two-box1 {
-  display: block;
+  display: flex;
   gap: 40px;            /* 左右の余白 */
   align-items: flex-start;
   margin: 20px 0;
@@ -232,7 +232,7 @@ details[open] .content {
 }
 /*ゲームの*/
 .two-box2 {
-  display: block;
+  display: flex;
   gap: 40px;            /* 左右の余白 */
   align-items: flex-start;
   margin: 20px 0;
@@ -276,7 +276,7 @@ details[open] .content {
 pre code {
   background: #f5f5f5;
   max-height: 600px; /*これによってスクロールになる*/
-  width: 650px;
+  width: 600px;
   height: 500px;
   overflow-y: auto; /*縦スクロール*/
   overflow-x: auto;
@@ -323,7 +323,7 @@ pre code {
 }
 
 /*スマホ用*/
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   
   .two-box1 {
     display: block;   /* 横並びを解除して縦並びにする*/
@@ -332,6 +332,7 @@ pre code {
   .right1 {
     width: 100%;      
   }
+
     .two-box2 {
     display: block;   /* ← 横並び解除 */
   }
@@ -342,7 +343,8 @@ pre code {
     margin-top: 20px;
   }
 
-  .left2-img-row {
+
+  .left2-img-row img {
     width: 100%;
   }
 
@@ -350,6 +352,7 @@ pre code {
   .site-header {
     display: block;
   }
+
 
   /* メニューは最初は非表示 */
   .nav {
