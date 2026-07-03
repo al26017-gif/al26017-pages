@@ -55,46 +55,8 @@ main {
   box-sizing: border-box;
 }
 
-/*スマホ用*/
-@media (max-width: 600px) {
-  h1 {
-    font-size: 24px !important;
-  }
-  h2 {
-    font-size: 20px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  h4,p,li {
-    font-size: 16px;
-  }
 
-  /* ハンバーガー表示 */
-  .site-header {
-    display: block;
-  }
 
-  /* メニューは最初は非表示 */
-  .nav {
-    display: none;
-    flex-direction: column;
-    background: #8399c6df;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  /* 開いたときだけ表示 */
-  .nav.open {
-    display: flex;
-  }
-
-  /* 縦並びにする */
-  .nav a {
-    margin: 10px 0;
-    padding: 10px 20px;
-  }
-}
 
 /*動画飛ぶリンクをボタンに*/
 .blue-btn {
@@ -250,7 +212,7 @@ details[open] .content {
 /*作品紹介横に分割*/
 /*ドット絵*/
 .two-box1 {
-  display: flex;
+  display: block;
   gap: 40px;            /* 左右の余白 */
   align-items: flex-start;
   margin: 20px 0;
@@ -270,7 +232,7 @@ details[open] .content {
 }
 /*ゲームの*/
 .two-box2 {
-  display: flex;
+  display: block;
   gap: 40px;            /* 左右の余白 */
   align-items: flex-start;
   margin: 20px 0;
@@ -358,4 +320,54 @@ pre code {
   position: relative;
   left: 50%;
   margin-left: -50vw;  
+}
+
+/*スマホ用*/
+@media (max-width: 600px) {
+  
+  .two-box1 {
+    display: block;   /* 横並びを解除して縦並びにする*/
+  }
+  .left1,
+  .right1 {
+    width: 100%;      
+  }
+    .two-box2 {
+    display: block;   /* ← 横並び解除 */
+  }
+
+  .left2,
+  .right2 {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .left2-img-row {
+    width: 100%;
+  }
+
+  /* ハンバーガー表示 */
+  .site-header {
+    display: block;
+  }
+
+  /* メニューは最初は非表示 */
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #8399c6df;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  /* 開いたときだけ表示 */
+  .nav.open {
+    display: flex;
+  }
+
+  /* 縦並びにする */
+  .nav a {
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
 }
