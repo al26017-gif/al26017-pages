@@ -349,16 +349,28 @@ pre code {
   }
 
   /* ハンバーガー表示 */
-  .site-header {
-    display: block;
+    .site-header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between; /*横方向の並び方を決める*/
+    align-items: center; /*縦方向の揃え方を決める*/
+    height: auto;   /* ← これをここに入れる！ */
+    padding: 10px 20px;
   }
-
-
+ 
+  .menu-btn {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
   /* メニューは最初は非表示 */
   .nav {
     display: none;
     flex-direction: column;
     background: #8399c6df;
+        position: absolute; /* ヘッダーの外に重ねる */
+    top: 80px;          /* ヘッダーの下に表示 */
+    right: 0;           /* 右端に表示 */
     width: 100%;
     padding: 10px 0;
   }

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1"> 
-        
+
         <title>自己紹介
         </title>
          <link rel="stylesheet" href="style.css">
@@ -17,6 +17,9 @@
 
 <header class="site-header">
   <h1 class="logo">AL26017</h1>
+    <!-- ハンバーガー -->
+  <div class="menu-btn" onclick="toggleMenu()">
+    menu
   <nav class="nav">
     <a href="index.html">トップページ</a>
     <a href="like.html">好きなもの</a>
@@ -186,6 +189,13 @@
   Email adress: al26017@shibaura-it.ac.jp<br>
   © 2026 Masuoka Website
 </footer>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav').classList.toggle('open');
+  }
+</script>
+
 
 </body>
 
