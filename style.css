@@ -264,7 +264,10 @@ details[open] .content {
 .right2-bun{
   text-align: center;
 }
-
+.nav {
+  display: flex;
+}
+.menu-btn { display:none; }
 /*ゲームのコードの配置*/
 .code-center {
   display: flex;
@@ -274,6 +277,7 @@ details[open] .content {
   box-sizing: border-box;
   overflow-x: auto; /* ← 必要なら */
 }
+
 
 /*コードの表示*/
 pre code {
