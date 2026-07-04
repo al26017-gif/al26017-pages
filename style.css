@@ -276,7 +276,7 @@ details[open] .content {
 pre code {
   background: #f5f5f5;
   max-height: 600px; /*これによってスクロールになる*/
-  width: 600px;
+  width: 500px;
   height: 500px;
   overflow-y: auto; /*縦スクロール*/
   overflow-x: auto;
