@@ -29,13 +29,39 @@
 </header>
 
 <main class="wrapper">
-
+<div class="star-bg">
+  <div class="bg"></div>
 <h3 id="mokuji" >＜目次＞</h3>
 <ul class="mokuji">
 <li><a href="#dott">1.ドット絵</a></li>
 <li><a href="#game">2.ゲーム</a></li>
 <li><a href="#pbl">3.PBL作品</a></li>
 </ul>
+</div>
+<style>
+.star-bg {
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  color: white;
+}
+
+/* 背景だけ薄くするレイヤー */
+.bg {
+  position: absolute;
+  inset: 0; /* top:0; left:0; width:100%; height:100%; の短縮 */
+  background: url('81844.jpg');
+  background-size: cover;
+  opacity: 0.5;  /* ← 背景だけ薄くなる */
+  z-index: -1;   /* ← 背景を後ろに押し下げる */
+  animation: moveStars 240s linear infinite;
+}
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -2000px; }
+
+}
+</style>
 
 <div class="two-box1">
     <div class="left1">
@@ -431,14 +457,15 @@ int main(void)
   }
 </script>
 
-
-  </body>  
-
-  <footer class="footer-band">
+<footer class="footer-band">
   芝浦工業大学<br>
   Email adress: al26017@shibaura-it.ac.jp<br>
   © 2026 Masuoka Website
 </footer>
+
+  </body>  
+
+
 
 
 </html>
