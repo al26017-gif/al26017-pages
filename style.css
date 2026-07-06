@@ -332,6 +332,7 @@ pre code {
   margin: 0;
   left: 0;
   position: static;
+  max-height: 55px;
 }
 
 /*スマホ用*/
