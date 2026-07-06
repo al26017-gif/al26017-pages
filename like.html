@@ -40,7 +40,30 @@
 <li><a href="#book">3.読んでいる本を語る</a></li>
 </ul>
 </div>
+<style>
+.star-bg {
+  position: relative;
+  padding: 40px;
+  width: 100%;
+  color: white;
+}
 
+/* 背景だけ薄くするレイヤー */
+.bg {
+  position: absolute;
+  inset: 0; /* top:0; left:0; width:100%; height:100%; の短縮 */
+  background: url('81844.jpg');
+  background-size: cover;
+  opacity: 0.5;  /* ← 背景だけ薄くなる */
+  z-index: -1;   /* ← 背景を後ろに押し下げる */
+  animation: moveStars 240s linear infinite;
+}
+@keyframes moveStars {
+  from { background-position: 0 0; }
+  to   { background-position: 0 -2000px; }
+
+}
+</style>
 
 
 <h2 id="artist"><span class="h2-bg">好きなアーティストを語る</span></h2>
