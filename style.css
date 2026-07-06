@@ -400,7 +400,8 @@ pre code {
 }
 
 .footer-band {
-  width: 100%;
+  width: 100vw; /* ← スマホでも画面幅ぴったり */
+  margin-left: calc(50% - 50vw); /* ← Google Sites の中央寄せ補正 */
   position: static;
   margin:0;
   padding: 20px 0;
