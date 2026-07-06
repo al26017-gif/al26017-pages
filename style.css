@@ -1,3 +1,7 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
 /* ヘッダー */
 .site-header {
   display: flex;
@@ -324,10 +328,10 @@ pre code {
   padding: 20px 0;       /* 上下の余白 */
   font-size: 0.9em;      /* 少し小さめの文字 */
   margin-top: 40px; 
-  width: calc(100vw - 10px);
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;  
+  width: 100%;
+  margin: 0;
+  left: 0;
+  position: static;
 }
 
 /*スマホ用*/
@@ -398,5 +402,6 @@ pre code {
 .footer-band {
   width: 100%;
   position: static;
-  margin-left: 0;
+  margin:0;
+  padding: 20px 0;
 }
