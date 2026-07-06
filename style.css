@@ -396,7 +396,7 @@ pre code {
 }
 
 .footer-band {
-  width: 100%
-   margin-left: 0;
-   margin-right: 0;
+  width: 100%;
+  position: static;
+  margin-left: 0;
 }
