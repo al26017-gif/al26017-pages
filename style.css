@@ -208,7 +208,7 @@ details .content {
 }
 
 details[open] .content {
-  max-height: 600px;  /* 中身より少し大きければOK */
+  max-height: 700px;  /* 中身より少し大きければOK */
   opacity: 1;
   transform: translateY(0);  /* 元の位置に戻る */
 }
