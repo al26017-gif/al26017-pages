@@ -403,6 +403,6 @@ pre code {
   width: 100vw; /* ← スマホでも画面幅ぴったり */
   margin-left: calc(50% - 50vw); /* ← Google Sites の中央寄せ補正 */
   position: static;
-  margin:0;
-  padding: 20px 0;
+  padding: 50px 0;
 }
+
