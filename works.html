@@ -64,10 +64,11 @@
 
 }
 </style>
-
+<div class="card">
 <div class="two-box1">
     <div class="left1">
 <h2 id="dott"><span class="h2-bg">ドット絵</span></h2>
+
 <p>terminalmode.hを使用して制作したドット絵</p>
 <p>宇宙が好きなので原色で表しやすい地球を描いてみた。色の配置に対称性や規則性が特にないため、コードを繰り返し処理でまとめるのが難しかった。</p>
 <img src="IMG_5172.jpeg" alt="地球">
@@ -234,14 +235,17 @@ int main(void)
 </pre>
 </div>
 </div>
-
+</div>
+<div class="card">
 <div class="two-box2">
   <div class="left2">
 <h2 id="game"><span class="h2-bg">ゲーム</span></h2>
+
 <p>terminalmode2.hを使用して制作したゲーム</p>
 <p>授業で習ったコードを生かそうという固定観念に謎に縛られた結果、<br>
   常にあるであろうゲームの下位互換という無個性の塊のようなゲームを作ってしまった。<br>
   見ている人は同じ過ちをしないように。</p>
+
   <div class="left2-img-row">
 <img src="IMG_5197.jpeg" class="photo" alt="落下ブロック１">
 <img src="IMG_5196.jpeg" class="photo" alt="落下ブロック2">
@@ -262,7 +266,6 @@ int main(void)
     </ul>
     </div>
     </div>
-    
       <h3 class="code-bun">＜コード＞</h3>
       <div class="code-center">
   <pre><code>
@@ -274,8 +277,8 @@ int main(void)
     
     int main(void)
     {
-        led_canvas_setsize(0,0); //必須
-    unsigned int usec=70000; // micro second  /*画面更新時間*/ 
+        led_canvas_setsize(0,0); 
+    unsigned int usec=70000; // micro second  //画面更新時間
     unsigned int counter=0, speed=30; // screen updata and object moving spped
     
 
@@ -322,13 +325,13 @@ int main(void)
             if(time(NULL) - start >= 30)
                 break;
         usleep(usec);
-        led_canvas_clear(); /*毎フレーム画面を一度クリアしてから描画しなおす*/ 
+        led_canvas_clear(); //毎フレーム画面を一度クリアしてから描画しなおす
         
         counter++;  
         
         ch=getkbchar(); //キー入力
             if(ch == 'j' && bar_col > 0) bar_col--;
-            if(ch == 'k' && bar_col + bar_width < LED_COL) bar_col++;
+            if(ch == 'k' && bar_col + bar_width &lf LED_COL) bar_col++;
             if(ch == 'x') break;  
     
 
@@ -367,7 +370,7 @@ int main(void)
 
             if( invaderROW[i] == bar_row 
                 && invaderCOL[i] >= bar_col 
-                && invaderCOL[i] &lt bar_col + bar_width ) /*当たり判定*/
+                && invaderCOL[i] &lt bar_col + bar_width ) //当たり判定
             {
             if(invaderColor[i]==SHIRO){
                 for(k=0;k &lt bar_width;k++){
@@ -439,19 +442,24 @@ int main(void)
 
 </code></pre>
 </div>
-
+</div>
 
 <h2 id="pbl"><span class="h2-bg">LED作品</span></h2>
+<div class="card">
 <p>青を基調とした星空に流れ星を流した。</p>
-<p>流れ星の位置座標の設定が何気に大変だった。<br>流れ星の軌跡が薄く背景の色と合わさった色である必要があったため工夫を要した。</p>
+<p>流れ星の位置座標の設定が何気に大変だった。<br>
+  流れ星の軌跡が薄く背景の色と合わさった色である必要があったため工夫を要した。<br>
+３回座標だけ違う流れ星なので繰り返し処理を入れることでコードを短くした。</p>
 <img src="stars.gif" alt="流れ星">
-
+</div>
   <h3>＜おまけ＞</h3>
 <h2><span class="h2-bg">弁当</span></h2>
+<div class="card">
 <p>高３のときに作っていた自作弁当たち</p>
 <img src="IMG_3827.jpeg" alt="弁当１">
 <img src="IMG_3828.jpeg" alt="弁当２">
 <br>※増岡は弁当を作品だと思っている
+</div>
 </main>
 
 
