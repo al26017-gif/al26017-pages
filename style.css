@@ -306,7 +306,7 @@ pre code {
 }
 
 .photo:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
 }
 
 
@@ -358,7 +358,7 @@ pre code {
 
 
   .left2-img-row img {
-    width: 100%;
+    width: 96%;
   }
 
   /* ハンバーガー表示 */
