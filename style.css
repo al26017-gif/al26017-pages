@@ -24,7 +24,11 @@ html, body {
   color: white; 
   text-decoration: none; /* 下線を消す */
 }
-
+.site-footer a {
+  position: relative; /*　これが基準点を作る */
+  color: white; 
+  text-decoration: none; /* 下線を消す */
+}
 .site-header a::after {
   position: absolute;
   left: 0;
@@ -35,11 +39,23 @@ html, body {
   background: white;
   transition: width 0.3s ease; /* ← モーションの肝 */
 }
-
+.site-footer a::after{
+  position: absolute;
+  left: 0;
+  content: '';
+  bottom: -2px; /* 文字のすぐ下に線を置く */
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
 .site-header a:hover::after {
   width: 100%; /* ホバー時に線が伸びる */
 }
-  
+.site-footer a:hover::after {
+  width: 100%;
+}
+
 .logo {
   font-size: 22px;
   font-weight: bold;
@@ -333,7 +349,7 @@ pre code {
   margin: 0;
   left: 0;
   position: static;
-  max-height: 55px;
+  max-height: 70px;
 }
 
 /*スマホ用*/
