@@ -100,6 +100,24 @@ main {
   to   { background-position: 0 -2000px; }
 
 }
+/*見出しデザイン*/
+.diamond {
+  position: relative;
+  padding: 0 0 0 20px;
+  display: flex;
+  align-items: center;
+}
+.diamond::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #133d6b;/*四角を作って*/
+  transform: rotate(45deg);/*45度回転*/
+}
+
+/*テキスト位置戻す*/
 
 
 /*動画飛ぶリンクをボタンに*/
@@ -126,7 +144,7 @@ body {
   color: #333;
   font-weight: 400;
   margin: 0 auto;     /* 左右を自動で中央寄せ */
-  padding: 0 20px;    /* スマホ用の左右余白 */
+  padding: 20px 20px;    /* スマホ用の左右余白 */
 }
 
 
