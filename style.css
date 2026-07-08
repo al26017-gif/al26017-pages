@@ -192,6 +192,7 @@ summary {
 /*スクロールの位置調整*/
 h2, h3 {
   scroll-margin-top: 110px;
+  padding: 16px 0;
 }
 
 
@@ -378,28 +379,6 @@ pre code {
   min-height: calc(100vh -100px - 100px); /* フッターの高さ分を引く */
 }
 
-
-
-/*フッター*/
-.footer-band {
-
-  background: #133d6b;   /* 帯の背景色 */
-  color: white;           /* 文字色 */
-  text-align: center;    /* 中央寄せ */
-  padding: 20px 0;       /* 上下の余白 */
-  font-size: 0.9em;      /* 少し小さめの文字 */
-  margin-top: 40px; 
-  margin: 0;
-  left: 0;
-  position: static;
-  max-height: 70px;
-  width: 99vw; /* ← スマホでも画面幅ぴったり */
-  margin-left: calc(50% - 50vw); /* ← Google Sites の中央寄せ補正 */
-  position: static;
-  padding: 50px 0;
-}
-
-
 .card {
               
   border-radius: 12px;       /* 角を丸く */
@@ -411,10 +390,29 @@ pre code {
   border: 1px solid rgba(255, 255, 255, 0.3); /* 枠線を少し透過させると馴染みます */
 /* 上下左右に24px、または32pxほどのゆったりした余白を作る */
   padding: 32px;
-/* ついでに角を少し丸めるとモダンになります */
-  border-radius: 8px;
   
 }
+
+/*フッター*/
+.footer-band {
+
+  background: #133d6b;   /* 帯の背景色 */
+  color: white;           /* 文字色 */
+  text-align: center;    /* 中央寄せ */
+  padding: 24px 0;       /* 上下の余白 */
+  font-size: 0.9em;      /* 少し小さめの文字 */
+  margin-top: 40px; 
+  margin: 0;
+  left: 0;
+  position: static;
+  max-height: 70px;
+  width: 99vw; /* ← スマホでも画面幅ぴったり */
+  margin-left: calc(50% - 50vw); /* ← Google Sites の中央寄せ補正 */
+  padding: 50px 0;
+}
+
+
+
 
 
 /*スマホ用*/
