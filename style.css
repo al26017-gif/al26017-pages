@@ -436,7 +436,17 @@ pre code {
     padding: 10px 20px;
     width: 100%;
   }
- 
+  .card {
+/* カードっぽさを無くす(枠線と背景を透明にする) */
+background: transparent;
+border: none;
+box-shadow: none; /* もし影をつけていたらこれも消す */
+/* 左右のPaddingを0にして、画面いっぱいに文字が広がるようにする */
+/* 上下だけは少し余白(8の倍数!)を残しておくと綺麗です */
+padding: 16px 0;
+/* 角丸もリセット */
+border-radius: 0;
+}
   .menu-btn {
     display: block;
     font-size: 28px;
