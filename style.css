@@ -120,13 +120,16 @@ main {
 
 /*フォント*/
 body {
-  font-family: "Noto Serif JP", serif;
+  font-family: "Times New Roman", "Yu Mincho", serif;
+  letter-spacing: 0.1em;
   line-height: 1.8;
   color: #333;
   font-weight: 400;
   margin: 0 auto;     /* 左右を自動で中央寄せ */
   padding: 0 20px;    /* スマホ用の左右余白 */
 }
+
+
 p,li {
   font-size: 18px; /* 好きな大きさに変更 */
 }
@@ -380,10 +383,18 @@ pre code {
 
 
 .card {
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  margin: 20px auto;
-  
+              
+  border-radius: 12px;       /* 角を丸く */
+  overflow: hidden;          /* はみ出しを切る（画像の角も丸く） */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 影でカード感 */
+  background: #fff;          /* 背景色 */
+  margin: 16px auto;         /* 上下余白＋中央寄せ */
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* 枠線を少し透過させると馴染みます */
+/* 上下左右に24px、または32pxほどのゆったりした余白を作る */
+  padding: 32px;
+/* ついでに角を少し丸めるとモダンになります */
+  border-radius: 8px;
   
 }
 
