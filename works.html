@@ -281,11 +281,11 @@ int main(void)
             invaderROW[i]=0; 
             invaderCOL[i]=rand()%LED_COL;
 
-        int r = rand() % 4;   // 0,1,2,3 の3通り
+        int r = rand() % 4;  
         if(r == 0 || r == 1)
-            invaderColor[i] = SHIRO;   // 白が2回
+            invaderColor[i] = SHIRO;   
         else if(r == 2 ){
-            invaderColor[i] = AO;     // 赤が1回
+            invaderColor[i] = AO;     
         }else invaderColor[i] = AKA;
 
             
@@ -371,9 +371,9 @@ int main(void)
             hitCount++;   // 当たった回数を増やす
         
         
-    if (hitCount % 10 == 0) {   // 10回ごと
+    if (hitCount % 10 == 0) {   
         for (j=0; j &lt BLOCKS; j++) {
-            if (invaderColor[j] == AKA) {   // 赤だけ
+            if (invaderColor[j] == AKA) {  
                 invaderSpeed[j] -= 2;       // 速くする
                 if (invaderSpeed[j] &lt 2)    // 速くなりすぎ防止
                     invaderSpeed[j] = 2;
@@ -385,9 +385,9 @@ int main(void)
                 invaderCOL[i] = rand() % LED_COL;
                 int r = rand() % 4; 
                  if(r == 0 || r == 1)
-                invaderColor[i] = SHIRO;   // 白が2回
+                invaderColor[i] = SHIRO;   
                 else if(r == 2 ){
-                invaderColor[i] = AO;     // 赤が1回
+                invaderColor[i] = AO;     
              }else invaderColor[i] = AKA;
               continue;       
             }
