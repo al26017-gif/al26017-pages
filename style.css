@@ -398,17 +398,15 @@ pre code {
 
   background: #133d6b;   /* 帯の背景色 */
   color: white;           /* 文字色 */
-  text-align: center;    /* 中央寄せ */
-  padding: 24px 0;       /* 上下の余白 */
   font-size: 0.9em;      /* 少し小さめの文字 */
   margin-top: 40px; 
-  margin: 0;
   left: 0;
   position: static;
   max-height: 70px;
   width: 99vw; /* ← スマホでも画面幅ぴったり */
   margin-left: calc(50% - 50vw); /* ← Google Sites の中央寄せ補正 */
-  padding: 50px 0;
+  text-align: center;    /* 中央寄せ */
+  padding: 60px 0;
 }
 
 
